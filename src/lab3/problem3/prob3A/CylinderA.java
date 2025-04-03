@@ -1,9 +1,7 @@
 package lab3.problem3.prob3A;
 
 
-public class CylinderA {
-
-    private double radius;
+public class CylinderA extends CircleA{
     double height;
 
 
@@ -15,10 +13,10 @@ public class CylinderA {
     public CylinderA() {
 
     }
-
     public double getRadius() {
         return radius;
     }
+
 
     public double computeVolume() {
         return 3.14 * getRadius() * getRadius() * height;
