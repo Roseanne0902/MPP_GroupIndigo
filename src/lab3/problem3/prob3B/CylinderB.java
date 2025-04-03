@@ -1,15 +1,16 @@
 package lab3.problem3.prob3B;
 
-public class Cylinder {
+public class CylinderB {
 
     private double radius;
     double height;
-    Circle circle;
 
-    public Cylinder(double radius, double height) {
+    CircleB circle;
+
+    public CylinderB(double radius, double height) {
         this.radius = radius;
         this.height = height;
-        circle = new Circle(radius);
+        circle = new CircleB(radius);
     }
 
     public double getRadius() {

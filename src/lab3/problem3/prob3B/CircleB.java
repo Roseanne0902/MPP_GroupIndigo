@@ -1,10 +1,10 @@
 package lab3.problem3.prob3B;
 
-public class Circle {
+public class CircleB {
 
     private double radius;
 
-    public Circle(double radius) {
+    public CircleB(double radius) {
         this.radius = radius;
     }
 
