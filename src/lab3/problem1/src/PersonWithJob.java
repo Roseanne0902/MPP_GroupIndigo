@@ -1,3 +1,6 @@
+package lab3.problem1.src;
+
+
 public class PersonWithJob {
 
     private Person person;

@@ -1,3 +1,6 @@
+package lab3.problem2.src;
+
+
 public class Main {
     public static void main(String[] args) {
         Landlord landlord = new Landlord("Dahlia");

@@ -1,3 +1,6 @@
+package lab3.problem2.src;
+
+
 public class Apartment {
     private String ApartNum;
     private Building building;

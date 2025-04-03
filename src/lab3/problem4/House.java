@@ -1,6 +1,6 @@
-package lesson3.labs.prob4;
+package lab3.problem4;
 
-public class House  {
+public class House extends Property {
 
 	private double lotSize;
 	
@@ -10,6 +10,7 @@ public class House  {
 	}
 
 
+	@Override
 	public double computeRent(){
 		return 0.1 * lotSize;
 	}

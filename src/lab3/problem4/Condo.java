@@ -1,6 +1,6 @@
-package lesson3.labs.prob4;
+package lab3.problem4;
 
-public class Condo  {
+public class Condo extends Property  {
 
 	private int numberOfFloors;
 	
@@ -8,6 +8,7 @@ public class Condo  {
 		this.numberOfFloors = numberOfFloors;
 	}
 
+	@Override
 	public double computeRent(){
 		return 500 * numberOfFloors;
 	}

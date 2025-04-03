@@ -1,3 +1,5 @@
+package lab3.problem1.src;
+
 public class Main {
     public static void main(String[] args) {
         PersonWithJob p1 = new PersonWithJob("Joe", 30000);

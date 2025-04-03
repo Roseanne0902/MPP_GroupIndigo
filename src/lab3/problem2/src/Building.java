@@ -1,3 +1,6 @@
+package lab3.problem2.src;
+
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,3 +1,5 @@
+package lab3.problem3.src.prob3B;
+
 public class Circle {
 
     private double radius;

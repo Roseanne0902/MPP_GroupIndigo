@@ -1,3 +1,6 @@
+package lab3.problem1.src;
+
+
 public class Person {
 
     private String name;
