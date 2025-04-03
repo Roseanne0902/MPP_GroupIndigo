@@ -2,10 +2,10 @@ package lab3.problem3.prob3A;
 
 
 public class CircleA {
-    double radius;
+    private double radius;
 
-    public CircleA() {
-        super();
+    public CircleA(double radius) {
+        this.radius = radius;
     }
 
     public double computeArea() {
