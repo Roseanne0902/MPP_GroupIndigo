@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/MPP_GroupIndigo.iml" filepath="$PROJECT_DIR$/.idea/MPP_GroupIndigo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GroupMPP.iml" filepath="$PROJECT_DIR$/GroupMPP.iml" />
     </modules>
   </component>
 </project>
