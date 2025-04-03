@@ -24,7 +24,7 @@ public class PersonWithJob {
         return person;
     }
 
-    @java.lang.Override
+    @Override
     public java.lang.String toString() {
         return "PersonWithJob{" +
                 "person=" + person +

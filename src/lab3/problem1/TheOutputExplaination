@@ -1,0 +1,27 @@
+In here:
+Person p1 = new PersonWithJob("Joe", 30000);
+Person p2 = new Person("Joe");
+
+System.out.println("p1.equals(p2)? " + p1.equals(p2));
+System.out.println("p2.equals(p1)? " + p2.equals(p1));
+
+=> The result is False and True
+
+Explanation:
+
+Case 1:
+p1.equals(p2):
+p1 is a PersonWithJob, so PersonWithJob.equals() is called.
+It checks:
+if (!(aPersonWithJob instanceof PersonWithJob)) return false;
+p2 is a plain Person, not a PersonWithJob, so this returns false.
+Output: false
+##################################
+Case 2:
+p2.equals(p1):
+p2 is a Person, so Person.equals() is called.
+It checks:
+if (!(aPerson instanceof Person)) return false;
+p1 is a Person (since PersonWithJob extends Person), so it passes.
+Then compares the names, which are both "Joe".
+Output: true
