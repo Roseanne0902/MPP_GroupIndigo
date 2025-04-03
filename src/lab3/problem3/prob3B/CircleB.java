@@ -8,11 +8,11 @@ public class CircleB {
         this.radius = radius;
     }
 
-    public double getRadius() {
-        return radius;
+    public double computeArea() {
+        return Math.PI * getRadius() * getRadius();
     }
 
-    public double computeArea(double radius) {
-        return Math.PI * getRadius() * getRadius();
+    public double getRadius() {
+        return radius;
     }
 }
