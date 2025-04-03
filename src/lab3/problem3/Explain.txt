@@ -1,0 +1,8 @@
+A cylinder is a specialized form of a circle.
+Cylinder inheriting circle properties and adding its own, like height.
+
+Circle as a Superclass:
+A Circle class can be defined with attributes like radius and methods for calculating area.
+
+Cylinder as a Subclass:
+A Cylinder class can inherit from Circle then add height to calculate volume.
