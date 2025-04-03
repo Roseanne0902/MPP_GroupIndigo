@@ -1,4 +1,4 @@
-package lab3.problem3.src.prob3B;
+package lab3.problem3.prob3B;
 
 public class Circle {
 
@@ -12,7 +12,7 @@ public class Circle {
         return radius;
     }
 
-    public double computeArea(double radius){
-   return Math.PI * getRadius() * getRadius();
+    public double computeArea(double radius) {
+        return Math.PI * getRadius() * getRadius();
     }
 }

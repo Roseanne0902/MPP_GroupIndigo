@@ -1,10 +1,10 @@
-package lab3.problem3.src.prob3A;
+package lab3.problem3.prob3A;
 
 
 public class CylinderA {
 
     private double radius;
-     double height;
+    double height;
 
 
     public CylinderA(double radius, double height) {
@@ -20,7 +20,7 @@ public class CylinderA {
         return radius;
     }
 
-    public double computeVolume(){
-        return 3.14* getRadius()* getRadius()* height;
+    public double computeVolume() {
+        return 3.14 * getRadius() * getRadius() * height;
     }
 }

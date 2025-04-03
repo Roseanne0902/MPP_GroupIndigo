@@ -1,4 +1,4 @@
-package lab3.problem2.src;
+package lab3.problem2;
 
 
 import java.util.ArrayList;

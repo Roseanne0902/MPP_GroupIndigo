@@ -1,4 +1,4 @@
-package lab3.problem2.src;
+package lab3.problem2;
 
 
 public class Apartment {
@@ -6,7 +6,7 @@ public class Apartment {
     private Building building;
     private Double rent;
 
-    Apartment(String Apartnum, Double rent, Building building){
+    Apartment(String Apartnum, Double rent, Building building) {
         this.ApartNum = Apartnum;
         this.rent = rent;
         this.building = building;

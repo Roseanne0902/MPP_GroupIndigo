@@ -1,4 +1,4 @@
-package lab3.problem1.src;
+package lab3.problem1;
 
 
 public class PersonWithJob {
