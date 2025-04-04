@@ -23,9 +23,9 @@ public class EmployeeCommissioned extends Employee {
     @Override
     public double calcGrossPay(int month, int year) {
         double totalOrderAmount = 0.0;
-        String targetMonth = String.format("%04d-%02d", year, month - 1);
         for (Order order : orders) {
-            if (order.getOrderDate().equals(targetMonth)) {
+            if (order.getOrderDate().getMonth().getValue() == month-1 &&
+                    order.getOrderDate().getYear() == year) {
                 totalOrderAmount += order.getOrderAmount();
             }
         }
