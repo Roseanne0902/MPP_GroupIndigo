@@ -1,14 +1,18 @@
 package lab4.problem3;
 
-public class Hourly extends Employee{
+public class EmployeeHourly extends Employee {
 
     private double hourlyWage;
     private double hoursPerWeek;
 
-    public Hourly(String empId, double hourlyWage, double hoursPerWeek) {
+    public EmployeeHourly(String empId, double hourlyWage, double hoursPerWeek) {
         super(empId);
         this.hourlyWage = hourlyWage;
         this.hoursPerWeek = hoursPerWeek;
+    }
+
+    public EmployeeHourly(String empId) {
+        super(empId);
     }
 
     @Override

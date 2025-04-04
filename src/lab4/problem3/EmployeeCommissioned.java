@@ -3,13 +3,13 @@ package lab4.problem3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Commissioned extends Employee {
+public class EmployeeCommissioned extends Employee {
 
     private double commission;
     private double baseSalary;
     private List<Order> orders;
 
-    public Commissioned(String empId, double commission, double baseSalary) {
+    public EmployeeCommissioned(String empId, double commission, double baseSalary) {
         super(empId);
         this.commission = commission;
         this.baseSalary = baseSalary;

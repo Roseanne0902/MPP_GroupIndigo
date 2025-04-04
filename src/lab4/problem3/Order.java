@@ -1,17 +1,19 @@
 package lab4.problem3;
 
+import java.time.LocalDate;
+
 public class Order {
     private String orderNo;
-    private String orderDate;
+    private LocalDate orderDate;
     private double orderAmount;
 
-    public Order(String orderNo, String orderDate, double orderAmount) {
+    public Order(String orderNo, LocalDate orderDate, double orderAmount) {
         this.orderNo = orderNo;
         this.orderDate = orderDate;
         this.orderAmount = orderAmount;
     }
 
-    public String getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 

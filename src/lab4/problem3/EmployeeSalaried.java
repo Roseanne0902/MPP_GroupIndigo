@@ -1,10 +1,10 @@
 package lab4.problem3;
 
-public class Salaried extends Employee{
+public class EmployeeSalaried extends Employee {
 
     private double salary;
 
-    public Salaried(String empId, double salary) {
+    public EmployeeSalaried(String empId, double salary) {
         super(empId);
         this.salary = salary;
     }
