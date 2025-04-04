@@ -1,9 +1,9 @@
-package mPP.exercisesMPP.lab4;
+package lab4.problem3;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Commissioned extends Employee{
+public class Commissioned extends Employee {
 
     private double commission;
     private double baseSalary;

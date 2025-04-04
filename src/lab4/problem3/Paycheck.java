@@ -1,4 +1,4 @@
-package mPP.exercisesMPP.lab4;
+package lab4.problem3;
 
 public final class Paycheck {
 
