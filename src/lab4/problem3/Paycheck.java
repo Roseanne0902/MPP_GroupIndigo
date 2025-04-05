@@ -2,6 +2,8 @@ package lab4.problem3;
 
 public final class Paycheck {
 
+
+
     private final double grossPay;
     private final double fica;
     private final double state;
