@@ -1,5 +1,6 @@
 package lab4.problem3;
 
+import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,11 +22,11 @@ public class EmployeeCommissioned extends Employee {
     }
 
     @Override
-    public double calcGrossPay(int month, int year) {
+    public double calcGrossPay(YearMonth yearMonth) {
         double totalOrderAmount = 0.0;
         for (Order order : orders) {
-            if (order.getOrderDate().getMonth().getValue() == month-1 &&
-                    order.getOrderDate().getYear() == year) {
+            YearMonth orderYearMonth = YearMonth.from(order.getOrderDate());
+            if (orderYearMonth.equals(yearMonth.minusMonths(1))) {
                 totalOrderAmount += order.getOrderAmount();
             }
         }

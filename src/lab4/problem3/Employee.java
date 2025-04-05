@@ -1,5 +1,8 @@
 package lab4.problem3;
 
+import java.time.Month;
+import java.time.YearMonth;
+
 public abstract class Employee {
     protected String empId;
 
@@ -7,18 +10,12 @@ public abstract class Employee {
         this.empId = empId;
     }
 
-    public Paycheck calcCompensation(int month, int year) {
-        double grossPay = calcGrossPay(month, year);
-        double fica = grossPay * 0.23;
-        double state = grossPay * 0.05;
-        double local = grossPay * 0.01;
-        double medicare = grossPay * 0.03;
-        double socialSecurity = grossPay * 0.075;
-
-        return new Paycheck(grossPay, fica, state, local, medicare, socialSecurity);
+    public Paycheck calcCompensation(YearMonth yearMonth) {
+        double grossPay = calcGrossPay(yearMonth);
+        return new Paycheck(grossPay);
     }
 
-    public abstract double calcGrossPay(int month, int year);
+    public abstract double calcGrossPay(YearMonth yearMonth);
 
     public void print() {
         System.out.println("Employee ID: " + empId);

@@ -2,22 +2,25 @@ package lab4.problem3;
 
 public final class Paycheck {
 
-
-
     private final double grossPay;
+    private final double ficaRate = 0.23;
     private final double fica;
+    private final double stateRate = 0.05;
     private final double state;
+    private final double localRate = 0.01;
     private final double local;
+    private final double medicareRate = 0.03;
     private final double medicare;
+    private final double socialSecurityRate = 0.075;
     private final double socialSecurity;
 
-    public Paycheck(double grossPay, double fica, double state, double local, double medicare, double socialSecurity) {
+    public Paycheck(double grossPay) {
         this.grossPay = grossPay;
-        this.fica = fica;
-        this.state = state;
-        this.local = local;
-        this.medicare = medicare;
-        this.socialSecurity = socialSecurity;
+        this.fica = grossPay * ficaRate;
+        this.state = grossPay * stateRate;
+        this.local =  grossPay *  localRate;
+        this.medicare = grossPay *  medicareRate;
+        this.socialSecurity = grossPay *  socialSecurityRate;
     }
 
     public double getNetPay() {

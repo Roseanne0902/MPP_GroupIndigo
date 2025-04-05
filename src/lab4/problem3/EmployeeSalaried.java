@@ -1,5 +1,7 @@
 package lab4.problem3;
 
+import java.time.YearMonth;
+
 public class EmployeeSalaried extends Employee {
 
     private double salary;
@@ -10,7 +12,7 @@ public class EmployeeSalaried extends Employee {
     }
 
     @Override
-    public double calcGrossPay(int month, int year) {
+    public double calcGrossPay(YearMonth yearMonth) {
         return salary;
     }
 }
