@@ -1,5 +1,5 @@
 package lab5.problem1.action;
 
-public interface MuteSqueak {
+public interface FlyBehavior {
     void fly();
 }

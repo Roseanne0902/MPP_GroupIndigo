@@ -21,6 +21,5 @@ public class Main {
             d.quack();
             d.swim();
         }
-
     }
 }

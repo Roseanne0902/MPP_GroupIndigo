@@ -1,5 +1,9 @@
 package lab5.problem1.action;
 
-public interface FlyWithWings {
-    void fly();
+public class FlyWithWings implements FlyBehavior {
+
+    @Override
+    public void fly() {
+        System.out.println("fly with wings");
+    }
 }

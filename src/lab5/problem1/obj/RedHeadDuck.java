@@ -1,17 +1,18 @@
 package lab5.problem1.obj;
 
 import lab5.problem1.Duck;
-import lab5.problem1.action.Flyable;
-import lab5.problem1.action.Quackable;
+import lab5.problem1.action.FlyWithWings;
+import lab5.problem1.action.Quack;
 
-public class RedHeadDuck  extends Duck implements Flyable, Quackable {
-    @Override
-    public void fly() {
-        System.out.println("flying with wings");
+public class RedHeadDuck extends Duck {
+
+    public RedHeadDuck() {
+        setFlyBehavior(new FlyWithWings());
+        setQuackBehavior(new Quack());
     }
 
     @Override
-    public void quack() {
-        System.out.println("quacking");
+    public void display() {
+        System.out.println("display");
     }
 }
