@@ -7,8 +7,7 @@ import lab5.problem1.action.Quack;
 public class RedHeadDuck extends Duck {
 
     public RedHeadDuck() {
-        setFlyBehavior(new FlyWithWings());
-        setQuackBehavior(new Quack());
+        super(new FlyWithWings(), new Quack());
     }
 
     @Override

@@ -7,8 +7,7 @@ import lab5.problem1.action.MuteQuack;
 public class DecoyDuck extends Duck {
 
     public DecoyDuck() {
-        setFlyBehavior(new CannotFly());
-        setQuackBehavior(new MuteQuack());
+        super(new CannotFly(), new MuteQuack());
     }
 
     @Override

@@ -7,8 +7,7 @@ import lab5.problem1.action.Squeak;
 public class RubberDuck extends Duck {
 
     public RubberDuck() {
-        setFlyBehavior(new CannotFly());
-        setQuackBehavior(new Squeak());
+        super(new CannotFly(), new Squeak());
     }
 
     @Override
