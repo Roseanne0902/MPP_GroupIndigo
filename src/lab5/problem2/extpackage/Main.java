@@ -6,7 +6,6 @@ import lab5.problem2.Order;
 
 import java.time.LocalDate;
 
-
 public class Main {
 	public static void main(String[] args) {
 		Customer cust = CustOrderFactory.createCustomer("Bob");
