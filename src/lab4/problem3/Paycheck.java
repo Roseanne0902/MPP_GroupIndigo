@@ -1,17 +1,18 @@
 package lab4.problem3;
 
 public final class Paycheck {
+    private final double FICA_RATE = 0.23;
+    private final double STATE_RATE = 0.05;
+    private final double LOCAL_RATE = 0.01;
+    private final double MEDICARE_RATE = 0.03;
+    private final double SOCIAL_SECURITY_RATE = 0.075;
+
 
     private final double grossPay;
-    private final double FICA_RATE = 0.23;
     private final double fica;
-    private final double STATE_RATE = 0.05;
     private final double state;
-    private final double LOCAL_RATE = 0.01;
     private final double local;
-    private final double MEDICARE_RATE = 0.03;
     private final double medicare;
-    private final double SOCIAL_SECURITY_RATE = 0.075;
     private final double socialSecurity;
 
     public Paycheck(double grossPay) {
