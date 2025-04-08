@@ -11,7 +11,7 @@
 
 ### Functional Dependencies (FDs):
 
-| Primary Key | Functional Dependencies |
+| Primary Key | Dependent Attributes |
 |-------------|--------------------------|
 | PatientNumber | FullName, BedNumber, WardNumber, WardName |
 | WardNumber | WardName |
