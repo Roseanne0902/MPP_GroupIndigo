@@ -1,4 +1,4 @@
-package prob2B;
+package lab2.prob2B;
 
 public class Main {
     public static void main(String[] args) {

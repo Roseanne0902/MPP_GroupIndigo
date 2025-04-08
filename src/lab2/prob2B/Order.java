@@ -1,4 +1,4 @@
-package prob2B;
+package lab2.prob2B;
 
 import java.util.ArrayList;
 import java.util.List;
