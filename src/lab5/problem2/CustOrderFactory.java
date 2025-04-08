@@ -7,6 +7,7 @@ public class CustOrderFactory {
     }
 
     public static Customer createCustomer(String name) {
+        if (name == null) throw new NullPointerException("Name cannot be null");
         return new Customer(name);
     }
 
