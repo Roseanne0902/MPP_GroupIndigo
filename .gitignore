@@ -43,6 +43,7 @@
 .idea/dataSources.xml
 .idea/sqldialects.xml
 
+.DS_store
 # CMake
 cmake-build-*/
 
