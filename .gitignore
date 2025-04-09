@@ -40,6 +40,7 @@
 # *.iml
 # *.ipr
 .idea/misc.xml
+.idea/dataSources.xml
 
 # CMake
 cmake-build-*/
