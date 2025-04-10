@@ -114,9 +114,3 @@ FROM (SELECT hotelno, COUNT(hotelno) AS y
       WHERE (datefrom <= '2025-08-31' AND
              dateto >= '2025-08-01')
       GROUP BY hotelno) as hc;
-
-SELECT *
-FROM Booking
-WHERE datefrom <= '2025-08-31' AND
-       dateto >= '2025-08-01'
-# GROUP BY hotelNo
