@@ -18,7 +18,7 @@ WHERE guestAddress like '%London%';
 SELECT *
 FROM Room
 where type in ('Double', 'Family')
-and price < 40
+  and price < 40
 order by price asc;
 
 
@@ -47,54 +47,76 @@ where type = 'Double';
 SELECT *
 from Booking
 where dateFrom >= '2025-08-01'
-and dateFrom < '2025-09-01';
+  and dateFrom < '2025-09-01';
 
 # Subqueries and joins
 # 6.16 List the price and type of all rooms at the Grosvenor Hotel.
 Select distinct r.type, r.price
 from Room r
-inner join Hotel h
+         inner join Hotel h
 where r.hotelNo = h.hotelNo
-and h.hotelName = 'Grosvenor';
+  and h.hotelName = 'Grosvenor';
 
 
 # 6.17 List all guests currently staying at the Grosvenor Hotel.
 select distinct g.guestNo, g.guestName, g.guestAddress
 from Guest g
-join Hotel h
-join Booking b
+         join Hotel h
+         join Booking b
 where b.hotelNo = h.hotelNo
-and h.hotelName = 'Grosvenor'
-and b.guestNo = g.guestNo;
+  and h.hotelName = 'Grosvenor'
+  and b.guestNo = g.guestNo;
 
 
 
 # 6.18 List the details of all rooms at the Grosvenor Hotel,
 # including the name of the guest staying in the room, if the room is occupied.
 
-select r.roomNo, r.type, r.price, g.guestName
-from Booking b
-inner join Room r
-inner join Hotel h
-inner join Guest g
-where h.hotelNo = r.hotelNo and
-b.hotelNo = h.hotelNo and
-b.dateFrom <= CURDATE() and b.dateTo >= CURDATE()
-and h.hotelName = 'Grosvenor';
-
-select *
-from Booking b
-where
-b.dateFrom <= CURDATE() and b.dateTo >= CURDATE()
+SELECT r.*, g.guestName
+FROM Room r
+         JOIN Hotel h ON r.hotelNo = h.hotelNo
+         LEFT JOIN Booking b ON r.roomNo = b.roomNo
+    AND r.hotelNo = b.hotelNo
+    AND CURDATE() BETWEEN b.dateFrom AND b.dateTo
+         LEFT JOIN Guest g ON b.guestNo = g.guestNo
+WHERE h.hotelName = 'Grosvenor';
 
 
 # 6.19 What is the total income from bookings for the Grosvenor Hotel today?
+SELECT *
+from Room r
+         join Hotel h on r.hotelNo = h.hotelNo
+         inner join Booking b
+                    on b.roomNo = r.roomNo
+                        and b.hotelNo = r.hotelNo
+                        and CURDATE() BETWEEN b.dateFrom and b.dateTo
+where h.hotelName = 'Grosvenor';
 
 
 # 6.22 List the number of rooms in each hotel.
-
+SELECT r.hotelNo, h.hotelName, COUNT(roomNo) AS count
+FROM Room r
+         LEFT JOIN Hotel h
+                   on r.hotelNo = h.hotelNo
+GROUP BY r.hotelNo;
 
 # 6.23 List the number of rooms in each hotel in London.
-
+SELECT r.hotelNo, h.hotelName, h.city, COUNT(roomNo) AS count
+FROM Room r
+         LEFT JOIN Hotel h on r.hotelNo = h.hotelNo
+where city = 'London'
+GROUP BY r.hotelNo;
 
 # 6.24 What is the average number of bookings for each hotel in August?
+SELECT hotelno, y / 31
+FROM (SELECT hotelno, COUNT(hotelno) AS y
+      FROM Booking
+      WHERE (datefrom <= '2025-08-31' AND
+             dateto >= '2025-08-01')
+      GROUP BY hotelno) as hc;
+
+SELECT *
+FROM Booking
+WHERE datefrom <= '2025-08-31' AND
+       dateto >= '2025-08-01'
+# GROUP BY hotelNo
