@@ -133,3 +133,14 @@ SELECT tbc.hotelNo, tbc.type, tbc.bookingCount
 FROM TempBookingCount tbc
 JOIN TempMaxBooking tmb
 ON tbc.hotelNo = tmb.hotelNo AND tbc.bookingCount = tmb.maxCount;
+
+# 6.26 What is the lost income from unoccupied rooms at each hotel today?
+SELECT h.hotelNo, SUM(r.price) AS lostIncome
+FROM Hotel h
+JOIN Room r ON h.hotelNo = r.hotelNo
+WHERE r.roomNo NOT IN (
+    SELECT b.roomNo
+    FROM Booking b
+    WHERE CURRENT_DATE BETWEEN b.dateFrom AND b.dateTo
+)
+GROUP BY h.hotelNo;
