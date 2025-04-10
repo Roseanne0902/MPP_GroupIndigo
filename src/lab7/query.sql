@@ -75,15 +75,16 @@ where b.hotelNo = h.hotelNo
 SELECT r.*, g.guestName
 FROM Room r
          JOIN Hotel h ON r.hotelNo = h.hotelNo
-         LEFT JOIN Booking b ON r.roomNo = b.roomNo
-    AND r.hotelNo = b.hotelNo
-    AND CURDATE() BETWEEN b.dateFrom AND b.dateTo
+         LEFT JOIN Booking b
+                   ON r.roomNo = b.roomNo
+                       AND r.hotelNo = b.hotelNo
+                       AND CURDATE() BETWEEN b.dateFrom AND b.dateTo
          LEFT JOIN Guest g ON b.guestNo = g.guestNo
 WHERE h.hotelName = 'Grosvenor';
 
 
 # 6.19 What is the total income from bookings for the Grosvenor Hotel today?
-SELECT *
+SELECT sum(r.price)
 from Room r
          join Hotel h on r.hotelNo = h.hotelNo
          inner join Booking b
