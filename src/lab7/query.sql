@@ -115,3 +115,33 @@ FROM (SELECT hotelno, COUNT(hotelno) AS y
       WHERE (datefrom <= '2025-08-31' AND
              dateto >= '2025-08-01')
       GROUP BY hotelno) as hc;
+
+# 6.25 What is the most commonly booked room type for each hotel in London?
+SELECT h.hotelNo, r.type, COUNT(*) AS bookingCount
+INTO TempBookingCount
+FROM Booking b
+JOIN Room r ON b.roomNo = r.roomNo AND b.hotelNo = r.hotelNo
+JOIN Hotel h ON b.hotelNo = h.hotelNo
+WHERE h.city = 'London'
+GROUP BY h.hotelNo, r.type;
+
+SELECT hotelNo, MAX(bookingCount) AS maxCount
+INTO TempMaxBooking
+FROM TempBookingCount
+GROUP BY hotelNo;
+
+SELECT tbc.hotelNo, tbc.type, tbc.bookingCount
+FROM TempBookingCount tbc
+JOIN TempMaxBooking tmb
+ON tbc.hotelNo = tmb.hotelNo AND tbc.bookingCount = tmb.maxCount;
+
+# 6.26 What is the lost income from unoccupied rooms at each hotel today?
+SELECT h.hotelNo, SUM(r.price) AS lostIncome
+FROM Hotel h
+JOIN Room r ON h.hotelNo = r.hotelNo
+WHERE r.roomNo NOT IN (
+    SELECT b.roomNo
+    FROM Booking b
+    WHERE CURRENT_DATE BETWEEN b.dateFrom AND b.dateTo
+)
+GROUP BY h.hotelNo;
