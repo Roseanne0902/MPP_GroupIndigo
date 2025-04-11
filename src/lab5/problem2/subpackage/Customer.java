@@ -1,4 +1,4 @@
-package lab5.problem2;
+package lab5.problem2.subpackage;
 
 import java.util.ArrayList;
 import java.util.List;

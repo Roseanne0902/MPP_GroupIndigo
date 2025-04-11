@@ -1,4 +1,4 @@
-package lab5.problem2;
+package lab5.problem2.subpackage;
 
 public class Item {
     private String name;
