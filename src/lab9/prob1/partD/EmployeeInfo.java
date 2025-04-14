@@ -20,7 +20,7 @@ public class EmployeeInfo {
                 tracker.put(e, e);
                 noDupsList.add(e);
             } else {
-                tracker.get(e).setVisited(true);
+               tracker.get(e).setVisited(true);
             }
         }
         return noDupsList;
