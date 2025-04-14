@@ -1,6 +1,6 @@
 ### Explain
 
-List contain function use Object.equals.
+List contains function use Object.equals.
 
 ```java
 

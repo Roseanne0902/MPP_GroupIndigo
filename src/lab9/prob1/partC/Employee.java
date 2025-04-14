@@ -1,5 +1,7 @@
 package lab9.prob1.partC;
 
+import java.util.Objects;
+
 public class Employee {
     private String name;
     private int salary;
@@ -38,5 +40,9 @@ public class Employee {
         return emp.name.equals(name) && emp.salary == salary;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, salary);
+    }
 
 }
