@@ -1,6 +1,6 @@
 package lab9.prob1.partB;
 
-public class Employee {
+public class Employee  {
     private String name;
     private int salary;
 
@@ -30,9 +30,20 @@ public class Employee {
         return "(" + name + ", " + salary + ")";
     }
 
-    public boolean equals(Employee e) {
+//    public boolean equals(Employee e) {
+//        return e.name.equals(name) && e.salary == salary;
+//    }
+
+    @Override
+    public boolean equals(Object ob) {
+        if (ob == null) return false;
+        if (!(ob instanceof Employee)) {
+            return false;
+        }
+        Employee e = (Employee) ob;
         return e.name.equals(name) && e.salary == salary;
     }
+
 //	public boolean equals(Object ob) {
 //		Employee e = (Employee)ob;
 //		return e.name.equals(name) && e.salary == salary;
