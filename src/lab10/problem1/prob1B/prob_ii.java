@@ -1,4 +1,4 @@
-package lab10.problem1.prob2B;
+package lab10.problem1.prob1B;
 
 import java.util.function.Supplier;
 

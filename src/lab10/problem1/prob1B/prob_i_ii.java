@@ -1,4 +1,4 @@
-package lab10.problem1.prob2B;
+package lab10.problem1.prob1B;
 
 // Part i: Method reference rewritten as a lambda expression
 import java.util.function.Supplier;
