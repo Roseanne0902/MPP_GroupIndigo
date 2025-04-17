@@ -1,15 +1,18 @@
 package lab11.prob4;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Problem {
 
     //Returns a list of those strings which belong to both of the two input lists
     public static List<String> elementsInBoth(List<String> list1, List<String> list2) {
-        //implement
-        return null;
+        return list1.stream()
+                .filter(list2::contains)
+                .toList();
     }
 
     //Returns a list, in sorted order, of the zipcodes, of those Customers
@@ -17,8 +20,12 @@ public class Problem {
     //but which does not contain the letter 'e'. Your output list should not contain
     //duplicate elements.
     public static List<String> getZipsOfSpecialCustomers(List<Customer> list) {
-        //implement
-        return null;
+        return list.stream()
+                .filter(c->c.getCity().length()>=6&&!c.getCity().toLowerCase().contains("e"))
+                .map(Customer::getZip)
+                .sorted()
+                .distinct()
+                .toList();
     }
 
 
