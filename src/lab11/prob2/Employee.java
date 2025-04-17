@@ -38,7 +38,7 @@ public class Employee {
     }
 
     public static void main(String[] args) {
-        List<Employee> list = new ArrayList<Employee>() {
+        List<Employee> list = new ArrayList<>() {
             {
                 add(new Employee("Joe", 50000));
                 add(new Employee("Jim", 75000));
@@ -50,9 +50,10 @@ public class Employee {
                 add(new Employee("Rich", 88000));
             }
         };
+        Comparator<Employee> comparator = Comparator.comparing(Employee::getName).thenComparing(Employee::getSalary, Comparator.reverseOrder());
         //expected output:
         //[[Jim, 100000], [Jim, 75000], [Jim, 70000], [Joe, 59000], [Joe, 50000], [Rich, 88000], [Steve, 55000], [Tom, 80000]]
-        System.out.println(/*implement */);
+        System.out.println(list.stream().sorted(comparator).toList());
     }
 }
 
