@@ -1,6 +1,4 @@
-package lab11.prob1;
-
-import java.time.LocalDate;
+package lab11.partA.prob1;
 
 public class OrderItem {
     private String productId;
