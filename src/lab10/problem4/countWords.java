@@ -3,10 +3,10 @@ package lab10.problem4;
 import java.util.List;
 
 public class countWords {
-    public int countWords(List<String> words, char c, char d, int len){
+    public int countWords(List<String> words, char c, char d, int len) {
         int count = 0;
-        for (String word: words){
-            if(word.contains(""+c) && word.length()==len && !word.contains(""+d)){
+        for (String word : words) {
+            if (word.contains("" + c) && word.length() == len && !word.contains("" + d)) {
                 count++;
             }
         }

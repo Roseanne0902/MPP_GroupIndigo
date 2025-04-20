@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Employee {
     String name;
+    int salary;
 
     public String getName() {
         return name;
@@ -24,7 +25,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    int salary;
 
     public Employee(String n, int s) {
         this.name = n;
