@@ -1,10 +1,7 @@
-package lab11.prob4;
+package lab11.partA.prob4;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class Problem {
 

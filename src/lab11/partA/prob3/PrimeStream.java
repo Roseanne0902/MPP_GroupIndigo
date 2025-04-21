@@ -1,4 +1,4 @@
-package lab11.prob3;
+package lab11.partA.prob3;
 
 import java.util.List;
 import java.util.function.Supplier;

@@ -1,13 +1,13 @@
-package lab11.prob2;
+package lab11.partA.prob2;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 public class Employee {
     String name;
+    int salary;
 
     public String getName() {
         return name;
@@ -25,7 +25,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    int salary;
 
     public Employee(String n, int s) {
         this.name = n;
@@ -56,4 +55,3 @@ public class Employee {
         System.out.println(list.stream().sorted(comparator).toList());
     }
 }
-
