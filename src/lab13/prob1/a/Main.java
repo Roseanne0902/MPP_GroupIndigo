@@ -10,7 +10,7 @@ public class Main {
         ints.add(2);
 
 //        List<Integer> is not subclass of List<Number>
-        List<Number> nums = ints;
-        nums.add(3.14);
+//        List<Number> nums = ints;
+//        nums.add(3.14);
     }
 }

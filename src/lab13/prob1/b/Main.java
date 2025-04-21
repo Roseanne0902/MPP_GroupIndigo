@@ -10,7 +10,7 @@ public class Main {
         ints.add(2);
         List<? extends Number> nums = ints;
         // Wildcard can add null only
-        nums.add(3.14);
+//        nums.add(3.14);
         nums.add(null);
 
     }
