@@ -16,7 +16,7 @@ public class countWords {
     public static void main(String[] args) {
         List<String> testWords = List.of(
                 "cat", "car", "cab", "dog", "cut",
-                "cater", "cow", "cop", "cap", "dip", "cup"
+                "cater", "cow", "cop", "cap", "dip", "cup", "cad"
         );
         countWords obj = new countWords();
         int result = obj.countWords(testWords, 'c', 'd', 3);
