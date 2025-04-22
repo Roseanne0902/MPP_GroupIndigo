@@ -8,7 +8,7 @@ public class prob_ii {
         class RandomSupplier implements Supplier<Double> {
             @Override
             public Double get() {
-                return (Double) Math.random();
+                return Math.random();
             }
         }
 

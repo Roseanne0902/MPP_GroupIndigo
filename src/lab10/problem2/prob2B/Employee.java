@@ -3,6 +3,7 @@ package lab10.problem2.prob2B;
 public class Employee {
     String name;
     int salary;
+
     public Employee(String n, int s) {
         this.name = n;
         this.salary = s;
@@ -14,7 +15,7 @@ public class Employee {
         sb.append("name: ");
         sb.append(name);
         sb.append(" salary: ");
-        sb.append("" + salary+">");
+        sb.append("" + salary + ">");
         return sb.toString();
 
     }

@@ -6,19 +6,19 @@ import java.util.Comparator;
 import java.util.List;
 
 public class EmployeeInfo {
-    static enum SortMethod {BYNAME, BYSALARY};
+    enum SortMethod {BYNAME, BYSALARY}
 
     public void sort(List<Employee> emps, final SortMethod method) {
         class EmployeeComparator implements Comparator<Employee> {
             @Override
             public int compare(Employee e1, Employee e2) {
-                if(method == SortMethod.BYNAME) {
+                if (method == SortMethod.BYNAME) {
                     int nameComp = e1.name.compareTo(e2.name);
-                    if(nameComp != 0) return nameComp;
+                    if (nameComp != 0) return nameComp;
                     return Integer.compare(e1.salary, e2.salary); // Secondary sort
                 } else {
                     int salaryComp = Integer.compare(e1.salary, e2.salary);
-                    if(salaryComp != 0) return salaryComp;
+                    if (salaryComp != 0) return salaryComp;
                     return e1.name.compareTo(e2.name); // Tie-breaker
                 }
             }

@@ -6,12 +6,12 @@
 ```java
 i. Runnable r = () →
 {
-int[][] products = new int[s][t];
-for (int i = 0; i < s; i++) {
-for(int j = i + 1; j < t; j++) {
- products[i][j] = i * j;
-}
-}
+    int[][] products = new int[s][t];
+    for (int i = 0; i < s; i++) {
+        for(int j = i + 1; j < t; j++) {
+         products[i][j] = i * j;
+        }
+    }
 }
 ```
 ### Parameters:
@@ -30,13 +30,13 @@ int[][] products = new int[s][t];  -> s and t come from outside
 
 ```java
 Comparator<String> comp = (s, t) →
- {
- if(ignoreCase == true) {
-return s.compareToIgnoreCase(t);
-} else {
- return s.compareTo(t);
+{   
+    if(ignoreCase == true) {
+        return s.compareToIgnoreCase(t);
+    } else {
+        return s.compareTo(t);
+    }
 }
- }
 ```
 
 ### Parameters:
@@ -46,6 +46,5 @@ return s.compareToIgnoreCase(t);
 - ignoreCase is not defined in the lambda, but used in:
 
 if (ignoreCase == true)
-
 
 Free variable: ignoreCase
