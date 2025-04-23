@@ -1,8 +1,6 @@
 package lab11.partB.prob11.a;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 
 public class Main {

@@ -18,12 +18,6 @@ public class Main {
                 new Employee("Donald", "Trump", 100000)
         );
 
-//        list.stream().filter(employee -> employee.salary > 100000)
-//                .filter(employee -> employee.lastName.charAt(0) > 'M')
-//                .map(employee -> employee.firstName + " " + employee.lastName)
-//                .sorted()
-//                .toList();
-
         TriFunction<List<Employee>, Integer, Character, List<String>> triFunction = (employees, salary, character) ->
                 employees.stream().filter(employee -> employee.salary > salary)
                         .filter(employee -> employee.lastName.charAt(0) > character)

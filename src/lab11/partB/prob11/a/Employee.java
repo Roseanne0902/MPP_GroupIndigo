@@ -14,14 +14,12 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder("<");
-		sb.append("first name: ");
-		sb.append(firstName);
-		sb.append(" last name: ");
-		sb.append(lastName);
-		sb.append(" salary: ");
-		sb.append(salary).append(">");
-		return sb.toString();
+        return "<" + "first name: " +
+                firstName +
+                " last name: " +
+                lastName +
+                " salary: " +
+                salary + ">";
 
 	}
 	public static String fullName(Employee e) {
