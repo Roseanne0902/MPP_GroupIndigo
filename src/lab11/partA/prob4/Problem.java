@@ -34,8 +34,8 @@ public class Problem {
 
     //expected output: [tree, bike]
     private static void testFirstMethod() {
-        List<String> list1 = Arrays.asList(new String[]{"friend", "tree", "bike", "bat"});
-        List<String> list2 = Arrays.asList(new String[]{"tree", "strong", "bike", "weak"});
+        List<String> list1 = Arrays.asList("friend", "tree", "bike", "bat");
+        List<String> list2 = Arrays.asList("tree", "strong", "bike", "weak");
         System.out.println("Strings occurring in both lists: " + elementsInBoth(list1, list2));
     }
 

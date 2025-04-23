@@ -16,11 +16,9 @@ public class Main {
 
     private boolean findProduct(String prodName) {
         return orderItems.stream().filter(Objects::nonNull)
-                .filter(o -> o.getProduct() != null
+                .anyMatch(o -> o.getProduct() != null
                         && o.getProduct().getProductName() != null
-                        && o.getProduct().getProductName().equalsIgnoreCase(prodName.toLowerCase()))
-                .findAny()
-                .isPresent();
+                        && o.getProduct().getProductName().equalsIgnoreCase(prodName.toLowerCase()));
     }
 
     private void loadOrderItemData() {
